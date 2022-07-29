@@ -52,16 +52,16 @@ m20 = Movie.create(title: "Ratatouille", description: "Remy dreams of becoming a
 puts "🌱 Seeding Users..."
 
 
-u1 = User.create(username: Faker::Internet.username(specifier: 5..10), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
-u2 = User.create(username: Faker::Internet.username(specifier: 5..10), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
-u3 = User.create(username: Faker::Internet.username(specifier: 5..10), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
-u4 = User.create(username: Faker::Internet.username(specifier: 5..10), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
-u5 = User.create(username: Faker::Internet.username(specifier: 5..10), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
-u6 = User.create(username: Faker::Internet.username(specifier: 5..10), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
-u7 = User.create(username: Faker::Internet.username(specifier: 5..10), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
-u8 = User.create(username: Faker::Internet.username(specifier: 5..10), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
-u9 = User.create(username: Faker::Internet.username(specifier: 5..10), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
-u10 = User.create(username: Faker::Internet.username(specifier: 5..10), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
+u1 = User.create(username: Faker::Internet.username(specifier: 6, separators: []), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
+u2 = User.create(username: Faker::Internet.username(specifier: 5, separators: []), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
+u3 = User.create(username: Faker::Internet.username(specifier: 7, separators: []), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
+u4 = User.create(username: Faker::Internet.username(specifier: 10, separators: []), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
+u5 = User.create(username: Faker::Internet.username(specifier: 8, separators: []), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
+u6 = User.create(username: Faker::Internet.username(specifier: 8, separators: []), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
+u7 = User.create(username: Faker::Internet.username(specifier: 9, separators: []), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
+u8 = User.create(username: Faker::Internet.username(specifier: 6, separators: []), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
+u9 = User.create(username: Faker::Internet.username(specifier: 10, separators: []), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
+u10 = User.create(username: Faker::Internet.username(specifier: 9, separators: []), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: Faker::Movies::LordOfTheRings.location)
 
 
 
@@ -73,13 +73,13 @@ Review.create(rating: 9, comment: "A fantastic way to spend 4 hours", movie_id: 
 
 Review.create(rating: 1, comment: "I am super lame and therefore I do not like this movie", movie_id: m2.id, user_id: u3.id)
 
-Review.create(rating: 7, comment: "Very enjoyable", movie_id: m2.id, user_id: u4.id)
+Review.create(rating: 7, comment: "Very enjoyable", movie_id: m2.id, user_id: u2.id)
 
 Review.create(rating: 8, comment: "Orcs? Elfs? Wizards? BALROGS? What's not to like?", movie_id: m1.id, user_id: u5.id)
 
 Review.create(rating: 10, comment: "GROND GROND GROND GROND", movie_id: m3.id, user_id: u6.id)
 
-Review.create(rating: 9, comment: "Giant fighting robots, what's not to like?", movie_id: m5.id, user_id: u4.id)
+Review.create(rating: 9, comment: "Giant fighting robots, what's not to like?", movie_id: m5.id, user_id: u2.id)
 
 Review.create(rating: 1, comment: "Michael Bay didn't do transformers justice", movie_id: m5.id, user_id: u7.id)
 
@@ -91,13 +91,13 @@ Review.create(rating: 6, comment: "Has aged very well", movie_id: m4.id, user_id
 
 Review.create(rating: 9, comment: "I literally peed myself laughing", movie_id: m4.id, user_id: u10.id)
 
-Review.create(rating: 1, comment: "Everybody died", movie_id: m6.id, user_id: u4.id)
+Review.create(rating: 1, comment: "Everybody died", movie_id: m6.id, user_id: u1.id)
 
 Review.create(rating: 7, comment: "Thor really should've gone for the head", movie_id: m6.id, user_id: u5.id)
 
-Review.create(rating: 8, comment: "A satisfying ending to the Infinity Saga", movie_id: m7.id, user_id: u4.id)
+Review.create(rating: 8, comment: "A satisfying ending to the Infinity Saga", movie_id: m7.id, user_id: u8.id)
 
-Review.create(rating: 1, comment: "Everybody is alive again", movie_id: m7.id, user_id: u8.id)
+Review.create(rating: 1, comment: "Everybody is alive again", movie_id: m7.id, user_id: u1.id)
 
 Review.create(rating: 2, comment: "I am dumb and dont like Mel Brooks", movie_id: m8.id, user_id: u4.id)
 
