@@ -3,7 +3,19 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-    { message: "Good luck with your project!" }.to_json
+    Movie.all.to_json
+  end
+
+  get "/movies/:id" do
+    Movie.where(id: params[:id]).to_json
+  end
+
+  get "/users/:id" do
+    User.where(id: params[:id]).to_json
+  end
+
+  get "/reviews/:id" do
+    Review.where(id: params[:id]).to_json
   end
 
 end
