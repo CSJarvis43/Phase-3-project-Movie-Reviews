@@ -10,6 +10,10 @@ class ApplicationController < Sinatra::Base
     Movie.where(id: params[:id]).to_json
   end
 
+  get "/reviews" do
+    Movie.gather_reviews.to_json
+  end
+
   get "/movies/top" do
     Movie.all.order(box_office_earnings: :desc).limit(10).to_json
   end
