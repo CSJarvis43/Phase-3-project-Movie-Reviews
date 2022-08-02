@@ -27,6 +27,20 @@ class ApplicationController < Sinatra::Base
 
   end
 
+  post "/favorites" do
+    Favorite.create(
+      id: params[:id],
+      title: params[:title], 
+      description: parmas[:description], 
+      img_url: params[:img_url], 
+      runtime: params[:runtime], 
+      director: params[:director], 
+      release_year: params[:release_year], 
+      production_company: params[:production_company], 
+      box_office_earnings: params[:box_office_earnings]
+    ).to_json
+    
+  end
   # get "/reviews/:username" do
   #   binding.pry
   #   Review.all.where(user_id: params[:username]).to_json
