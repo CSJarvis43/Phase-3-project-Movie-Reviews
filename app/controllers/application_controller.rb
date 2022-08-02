@@ -41,9 +41,13 @@ class ApplicationController < Sinatra::Base
     ).to_json
     
   end
-  # get "/reviews/:username" do
-  #   binding.pry
-  #   Review.all.where(user_id: params[:username]).to_json
-  # end
+
+  post "/reviews/new" do
+    Review.create(
+      rating: params[:rating],
+      comment: params[:comment],
+      movie_id: params[:movie_id]
+    ).to_json
+  end
 
 end
