@@ -8,4 +8,8 @@ class Movie < ActiveRecord::Base
         end
     end
 
+    def self.get_reviews
+        Movie.all.to_json(include: [:reviews, :users])
+    end
+
 end

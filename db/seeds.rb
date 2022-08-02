@@ -71,9 +71,9 @@ Review.create(rating: 10, comment: "Absoulte Masterpiece", movie_id: m1.id, user
 
 Review.create(rating: 9, comment: "A fantastic way to spend 4 hours", movie_id: m3.id, user_id: u2.id)
 
-Review.create(rating: 1, comment: "I am super lame and therefore I do not like this movie", movie_id: m2.id, user_id: u3.id)
+Review.create(rating: 8, comment: "The Ents are badass", movie_id: m2.id, user_id: u3.id)
 
-Review.create(rating: 7, comment: "Very enjoyable", movie_id: m2.id, user_id: u2.id)
+Review.create(rating: 9, comment: "Very enjoyable", movie_id: m2.id, user_id: u2.id)
 
 Review.create(rating: 8, comment: "Orcs? Elfs? Wizards? BALROGS? What's not to like?", movie_id: m1.id, user_id: u5.id)
 
@@ -99,7 +99,7 @@ Review.create(rating: 8, comment: "A satisfying ending to the Infinity Saga", mo
 
 Review.create(rating: 1, comment: "Everybody is alive again", movie_id: m7.id, user_id: u1.id)
 
-Review.create(rating: 2, comment: "I am dumb and dont like Mel Brooks", movie_id: m8.id, user_id: u4.id)
+Review.create(rating: 2, comment: "Mel Brooks is not funny", movie_id: m8.id, user_id: u4.id)
 
 Review.create(rating: 4, comment: "Nic Cage as John Travolta is just weird", movie_id: m10.id, user_id: u10.id)
 

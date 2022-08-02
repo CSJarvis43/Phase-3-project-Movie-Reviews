@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/reviews" do
-    Movie.gather_reviews.to_json
+    Movie.get_reviews
   end
 
   get "/movies/top" do
