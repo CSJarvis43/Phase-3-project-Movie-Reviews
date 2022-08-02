@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_29_200600) do
+ActiveRecord::Schema.define(version: 2022_08_02_204748) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "img_url"
+    t.integer "runtime"
+    t.string "director"
+    t.integer "release_year"
+    t.string "production_company"
+    t.integer "box_office_earnings"
+  end
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
