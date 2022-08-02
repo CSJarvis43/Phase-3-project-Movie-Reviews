@@ -31,7 +31,7 @@ class ApplicationController < Sinatra::Base
     Favorite.create(
       id: params[:id],
       title: params[:title], 
-      description: parmas[:description], 
+      description: params[:description], 
       img_url: params[:img_url], 
       runtime: params[:runtime], 
       director: params[:director], 
