@@ -36,7 +36,13 @@ class ApplicationController < Sinatra::Base
       director: params[:director], 
       release_year: params[:release_year], 
       production_company: params[:production_company], 
-      box_office_earnings: params[:box_office_earnings],
+      box_office_earnings: params[:box_office_earnings]
+    ).to_json
+    
+    Review.create(
+      rating: params[:rating],
+      comment: params[:comment],
+      movie_id: params[:movie_id]
     ).to_json
     
   end
