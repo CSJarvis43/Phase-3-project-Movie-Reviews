@@ -29,7 +29,6 @@ class ApplicationController < Sinatra::Base
 
   post "/favorites" do
     Favorite.create(
-      id: params[:id],
       title: params[:title], 
       description: params[:description], 
       img_url: params[:img_url], 
@@ -37,9 +36,13 @@ class ApplicationController < Sinatra::Base
       director: params[:director], 
       release_year: params[:release_year], 
       production_company: params[:production_company], 
-      box_office_earnings: params[:box_office_earnings]
+      box_office_earnings: params[:box_office_earnings],
     ).to_json
     
+  end
+
+  get "/favorites" do
+    Favorite.all.to_json
   end
 
   post "/reviews/new" do
