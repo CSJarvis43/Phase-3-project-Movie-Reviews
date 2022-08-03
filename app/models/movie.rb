@@ -13,15 +13,19 @@ class Movie < ActiveRecord::Base
         Movie.all.to_json(include: [:reviews, :users])
     end
 
-    def self.avg_reviews
-        top_movies = Movie.all.includes(:reviews).order("reviews.rating desc")
-        top_movies
-    end
 
     # def self.avg_reviews
     #     Movie.all.map do |movie|
-    #         movie.reviews.reduce(0) { |acc, curr| acc + curr.rating} / reviews.length().to_f
+    #         movie.reviews.reduce(0) { |acc, curr| acc + curr.rating} 
     #     end
     # end
+
+    def single_avg
+        self.reviews.reduce(0) { |acc, curr| acc + curr.rating}
+    end
+
+    def self.sort_by_reviews
+        Movie.all.sort_by { |movie| movie.single_avg }.reverse
+    end
 
 end
