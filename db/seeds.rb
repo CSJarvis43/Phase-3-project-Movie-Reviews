@@ -71,7 +71,7 @@ Review.create(rating: 10, comment: "Absoulte Masterpiece", movie_id: m1.id, user
 
 Review.create(rating: 9, comment: "A fantastic way to spend 4 hours", movie_id: m3.id, user_id: u2.id)
 
-Review.create(rating: 8, comment: "The Ents are badass", movie_id: m2.id, user_id: u3.id)
+Review.create(rating: 8, comment: "Walking talking trees", movie_id: m2.id, user_id: u3.id)
 
 Review.create(rating: 9, comment: "Very enjoyable", movie_id: m2.id, user_id: u2.id)
 
