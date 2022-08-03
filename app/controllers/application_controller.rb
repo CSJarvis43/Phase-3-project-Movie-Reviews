@@ -15,8 +15,10 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/movies/top" do
-    Movie.all.order(box_office_earnings: :desc).limit(10).to_json
+    Movie.avg_reviews.to_json(include: [:reviews, :users])
+    # Movie.all.order(box_office_earnings: :desc).limit(10).to_json
   end
+
 
   get "/movies/release" do
     Movie.all.order(release_year: :asc).to_json
