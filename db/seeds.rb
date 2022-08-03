@@ -4,6 +4,7 @@ puts "Tilling Soil..."
 Movie.destroy_all
 User.destroy_all
 Review.destroy_all
+Favorite.destroy_all
 
 puts "🌱 Seeding Movies..."
 
