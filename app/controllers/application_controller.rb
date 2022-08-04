@@ -1,3 +1,4 @@
+
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
@@ -30,6 +31,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/favorites" do
+
     Favorite.create(
       title: params[:title], 
       description: params[:description], 
@@ -42,11 +44,12 @@ class ApplicationController < Sinatra::Base
     ).to_json
     
     Review.create(
+      
       rating: params[:rating],
       comment: params[:comment],
       movie_id: params[:movie_id]
     ).to_json
-    
+
   end
 
   get "/favorites" do
