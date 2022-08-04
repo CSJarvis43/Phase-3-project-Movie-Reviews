@@ -30,6 +30,10 @@ class ApplicationController < Sinatra::Base
 
   end
 
+  get "/users" do
+    User.rev_by_user
+  end
+
   post "/favorites" do
 
     Favorite.create(
