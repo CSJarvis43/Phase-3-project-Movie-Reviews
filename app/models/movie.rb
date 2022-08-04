@@ -21,7 +21,9 @@ class Movie < ActiveRecord::Base
     # end
 
     def single_avg
-        self.reviews.reduce(0) { |acc, curr| acc + curr.rating}
+        total = self.reviews.reduce(0) { |acc, curr| acc + curr.rating}
+        average = total / self.reviews.length
+        average
     end
 
     def self.sort_by_reviews
