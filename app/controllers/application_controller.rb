@@ -35,6 +35,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/favorites" do
+    # binding.pry
 
     Favorite.create(
       title: params[:title], 
@@ -47,13 +48,16 @@ class ApplicationController < Sinatra::Base
       box_office_earnings: params[:box_office_earnings]
     ).to_json
     
-    Review.create(
+    params[:reviews].each do |review|
+      Review.create(
       
-      rating: params[:rating],
-      comment: params[:comment],
-      movie_id: params[:movie_id]
+      rating: review[:rating],
+      comment: review[:comment],
+      movie_id: review[:movie_id]
     ).to_json
 
+    end
+    
   end
 
   get "/favorites" do
